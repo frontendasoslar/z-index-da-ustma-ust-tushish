@@ -1,0 +1,47 @@
+.main-content {
+}
+.container {
+  width: 100%;
+  max-width: 600px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+}
+
+.box {
+  width: 600px;
+  height: 150px;
+  background-color: rgba(255, 217, 0, 0.5);
+  border: 2px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Agar ikkita element ustma-ust turgan bo'lsava ularning ikkalasini positioni relative bo'lsa ularning birortasini ichiga biror element joylab kichkina elementni ikkala elementni ustiga chiqarish uchun kichkina elementning ota avlodiga z-indexni ikkinchi elementnikidan kattaroq berish kerak */
+.box-1 {
+  position: relative;
+  background-color: lightblue;
+  z-index: 5;
+}
+
+
+/* Agar kichkina elementni z-indexi 5 uning ota elementiga 2 ikkinchi element z-indexi 3 berib kichkina ekementni ikkalasini ustiga chiqarmoqchi bo'lsak kichkina element ikkinchisini ostiga o'tib qoladi. Chunki birinchi element uchun z-index 2 kichkina element uchun 5 bo'lganini 2.5 deb hisoblaydi ikkinchi elementni z-indexi 3 bo'lganligi uchun kichkina element uning ostiga o'tib oladi. Shu sababli kichkina elementning z-indexi ni kattaroq berish kerak */
+.mini-box {
+  bottom: 0;
+  left: 0;
+  bottom: -25px;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #000;
+  background-color: yellow;
+}
+
+.box-2 {
+  position: relative;
+  background-color: dodgerblue;
+  z-index: 2;
+}
